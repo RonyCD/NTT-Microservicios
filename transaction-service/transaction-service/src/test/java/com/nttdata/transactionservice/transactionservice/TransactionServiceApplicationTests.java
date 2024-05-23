@@ -1,10 +1,10 @@
-package com.nttdata.clientservice.clientservice;
+package com.nttdata.transactionservice.transactionservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ClientServiceApplicationTests {
+class TransactionServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
