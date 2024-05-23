@@ -7,30 +7,23 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity(name = "TransactionEntity")
-@Table(name = "TB_TRANSACTION")
+@Entity(name = "TypeTransactionEntity")
+@Table(name = "TB_TYPE_TRANSACTION")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class TransactionEntity {
+public class TypeTransactionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "INT_ID_TRANSACTION")
+    @Column(name = "INT_ID_TYPE_TRANSACTION")
     private Long id = 0L;
 
-    @Column(name = "INT_ID_BANK_ACCOUNT")
-    private Long idBankAccount;
+    @Column(name = "VCH_TRANSACTION_CODE")
+    private String transactionCode;
 
-
-
-
-
-
-
-
-
-
+    @Column(name = "VCH_TRANSACTION_NAME")
+    private String transactionName;
 
 }
