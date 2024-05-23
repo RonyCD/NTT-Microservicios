@@ -6,5 +6,4 @@ public interface BankAccountService {
 
     public BankAccountEntity createBankAccount(BankAccountEntity bankAccount);
 
-    public BankAccountEntity getBankAccount(Long id);
 }

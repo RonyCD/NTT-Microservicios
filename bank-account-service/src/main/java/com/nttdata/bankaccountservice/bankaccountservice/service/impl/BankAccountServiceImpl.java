@@ -18,8 +18,5 @@ public class BankAccountServiceImpl implements BankAccountService {
         return newBankAccount;
     }
 
-    @Override
-    public BankAccountEntity getBankAccount(Long id) {
-        return bankAccountRepository.findById(id);
-    }
+
 }
