@@ -6,6 +6,8 @@ import com.nttdata.bankaccountservice.bankaccountservice.service.BankAccountServ
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class BankAccountServiceImpl implements BankAccountService {
 
@@ -16,6 +18,11 @@ public class BankAccountServiceImpl implements BankAccountService {
     public BankAccountEntity createBankAccount(BankAccountEntity bankAccount) {
         BankAccountEntity newBankAccount = bankAccountRepository.save(bankAccount);
         return newBankAccount;
+    }
+
+    @Override
+    public BankAccountEntity getBankAccountById(Long id) {
+        return bankAccountRepository.findById(id).orElse(null);
     }
 
 

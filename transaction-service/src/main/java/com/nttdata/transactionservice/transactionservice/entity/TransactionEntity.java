@@ -1,6 +1,5 @@
-package com.nttdata.bankaccountservice.bankaccountservice.entity;
+package com.nttdata.transactionservice.transactionservice.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,43 +10,37 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity(name = "BankAccountEntity")
-@Table(name = "tb_bank_account")
+@Entity(name = "TransactionEntity")
+@Table(name = "TB_TRANSACTION")
 @SuperBuilder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BankAccountEntity {
+public class TransactionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "INT_ID_BANK_ACCOUNT")
+    @Column(name = "INT_ID_TRANSACTION")
     private Long id = 0L;
 
-    @Column(name = "INT_ID_CLIENT", nullable = false)
-    private Long idClient;
+    @Column(name = "INT_ID_BANK_ACCOUNT")
+    private Long idBankAccount;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "INT_ID_TYPE_ACCOUNT", nullable = false)
-    @JsonIgnore
-    private TypeAccountEntity typeAccount;
+    @JoinColumn(name = "INT_ID_TYPE_TRANSACTION", nullable = false)
+    private TypeTransactionEntity typeTransaction;
 
-    @Column(name = "VCH_NUM_ACCOUNT")
-    private String numAccount;
+    @Column(name = "VCH_SENDER_ACCOUNT")
+    private String senderAccount;
 
-    @Column(name = "DOU_OPENING_AMOUNT")
-    private Double openingAmount;
+    @Column(name = "VCH_DESTINATION_ACCOUNT")
+    private String destinationAccount;
 
-    @Column(name = "DOU_BALANCE")
-    private Double balance;
+    @Column(name = "DOU_AMOUNT")
+    private Double amount;
 
-    @Column(name = "DT_OPENING_DATE")
-    @Builder.Default
-    private LocalDateTime openingDate = LocalDateTime.now();;
-
-    @Column(name = "VCH_STATUS")
-    @Builder.Default
-    private String status = "active";
+    @Column(name = "DT_DATE_OPERATION")
+    private LocalDateTime dateOperation;
 
     @Column(name = "VCH_USER_CREATION")
     @Builder.Default

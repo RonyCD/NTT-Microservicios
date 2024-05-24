@@ -8,11 +8,11 @@
 		<version>2.7.13</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.nttdata.bankaccountservice</groupId>
-	<artifactId>bank-account-service</artifactId>
+	<groupId>com.nttdata.transactionservice</groupId>
+	<artifactId>transaction-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bank-account-service</name>
-	<description>Bank Account Service</description>
+	<name>transaction-service</name>
+	<description>Transaction Service</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.8</spring-cloud.version>
