@@ -1,4 +1,4 @@
-package com.nttdata.creditservice.creditservice;
+package com.nttdata.creditservice.credit_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,5 @@
-package com.nttdata.creditservice.creditservice.entity;
+package com.nttdata.creditservice.credit_service.entity;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

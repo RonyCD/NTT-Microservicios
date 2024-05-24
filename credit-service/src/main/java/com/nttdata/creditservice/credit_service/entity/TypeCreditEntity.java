@@ -1,5 +1,6 @@
 
-package com.nttdata.creditservice.creditservice.entity;
+package com.nttdata.creditservice.credit_service.entity;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
+
 
 @Entity(name = "TypeAccountEntity")
 @Table(name = "TB_TYPE_CREDIT")

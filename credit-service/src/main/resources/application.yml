@@ -1,11 +1,10 @@
-
 spring:
   application:
     name: credit-service
   datasource:
     url: jdbc:postgresql://localhost:5432/bd_credit
     username: postgres
-    password: lander
+    password: kmaskita
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -18,4 +17,11 @@ spring:
       matching-strategy: ant_path_matcher
 
 server:
-  port: 8004
+  port: 8003
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
